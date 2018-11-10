@@ -13,6 +13,7 @@
 		5C8C8E4E2196BF220071F0CA /* LEOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4D2196BF220071F0CA /* LEOError.swift */; };
 		5C8C8E502196C22B0071F0CA /* LEOObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4F2196C22B0071F0CA /* LEOObjectResponse.swift */; };
 		5C8C8E522196C3D70071F0CA /* LEOArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E512196C3D70071F0CA /* LEOArrayResponse.swift */; };
+		5C8C8E542196C5070071F0CA /* LEOListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E532196C5070071F0CA /* LEOListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5C8C8E4D2196BF220071F0CA /* LEOError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOError.swift; sourceTree = "<group>"; };
 		5C8C8E4F2196C22B0071F0CA /* LEOObjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOObjectResponse.swift; sourceTree = "<group>"; };
 		5C8C8E512196C3D70071F0CA /* LEOArrayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOArrayResponse.swift; sourceTree = "<group>"; };
+		5C8C8E532196C5070071F0CA /* LEOListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5C8C8E4D2196BF220071F0CA /* LEOError.swift */,
 				5C8C8E4F2196C22B0071F0CA /* LEOObjectResponse.swift */,
 				5C8C8E512196C3D70071F0CA /* LEOArrayResponse.swift */,
+				5C8C8E532196C5070071F0CA /* LEOListResponse.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */,
 				5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */,
+				5C8C8E542196C5070071F0CA /* LEOListResponse.swift in Sources */,
 				5C8C8E502196C22B0071F0CA /* LEOObjectResponse.swift in Sources */,
 				5C8C8E522196C3D70071F0CA /* LEOArrayResponse.swift in Sources */,
 				5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */,
