@@ -15,7 +15,8 @@ Tag 0.1 introduces Swift.Codable ports of the original LEONetworkingLayer projec
 
 ### Server responses model layer changes
 
-- `LEOValueResponse` is absent in this implementation because it was obsoleted in the past
+- `LEOValueResponse` is absent in this implementation because it was obsoleted in the past.  
+Quick-fix: `LEOValueResponse` ~> `LEOObjectResponse`
 - `LEOListResponse`'s `data` field now points not to the array of the items parsed from the response, but to the `LEOListModel` instance. This has happened due to reusage of the `LEOObjectResponse`'s parsing implementation.  
 Quick-fix: `data` ~> `data.items`
 
