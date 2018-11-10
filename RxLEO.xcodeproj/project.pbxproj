@@ -16,6 +16,8 @@
 		5C8C8E542196C5070071F0CA /* LEOListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E532196C5070071F0CA /* LEOListResponse.swift */; };
 		5C8C8E582196C9070071F0CA /* LEOMediaResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E572196C9070071F0CA /* LEOMediaResource.swift */; };
 		5C8C8E5A2196CA490071F0CA /* LEOMediaResourceUploadLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */; };
+		5C92CE7321971F2E00EB37BC /* LEOAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7221971F2E00EB37BC /* LEOAPIProvider.swift */; };
+		5C92CE7521971F6A00EB37BC /* RxLEOAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7421971F6A00EB37BC /* RxLEOAPIProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		5C8C8E572196C9070071F0CA /* LEOMediaResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOMediaResource.swift; sourceTree = "<group>"; };
 		5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOMediaResourceUploadLink.swift; sourceTree = "<group>"; };
 		5C8C8E5B2196CBB50071F0CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5C92CE7221971F2E00EB37BC /* LEOAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOAPIProvider.swift; sourceTree = "<group>"; };
+		5C92CE7421971F6A00EB37BC /* RxLEOAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLEOAPIProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 			children = (
 				5C92CE7121971EA600EB37BC /* Models */,
 				5C8C8E3B2196BB990071F0CA /* Info.plist */,
+				5C92CE7221971F2E00EB37BC /* LEOAPIProvider.swift */,
+				5C92CE7421971F6A00EB37BC /* RxLEOAPIProvider.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -174,12 +180,14 @@
 			files = (
 				5C8C8E5A2196CA490071F0CA /* LEOMediaResourceUploadLink.swift in Sources */,
 				5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */,
+				5C92CE7521971F6A00EB37BC /* RxLEOAPIProvider.swift in Sources */,
 				5C8C8E582196C9070071F0CA /* LEOMediaResource.swift in Sources */,
 				5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */,
 				5C8C8E542196C5070071F0CA /* LEOListResponse.swift in Sources */,
 				5C8C8E502196C22B0071F0CA /* LEOObjectResponse.swift in Sources */,
 				5C8C8E522196C3D70071F0CA /* LEOArrayResponse.swift in Sources */,
 				5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */,
+				5C92CE7321971F2E00EB37BC /* LEOAPIProvider.swift in Sources */,
 				5C8C8E4E2196BF220071F0CA /* LEOError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
