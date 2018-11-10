@@ -15,6 +15,7 @@
 		5C8C8E522196C3D70071F0CA /* LEOArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E512196C3D70071F0CA /* LEOArrayResponse.swift */; };
 		5C8C8E542196C5070071F0CA /* LEOListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E532196C5070071F0CA /* LEOListResponse.swift */; };
 		5C8C8E582196C9070071F0CA /* LEOMediaResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E572196C9070071F0CA /* LEOMediaResource.swift */; };
+		5C8C8E5A2196CA490071F0CA /* LEOMediaResourceUploadLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5C8C8E512196C3D70071F0CA /* LEOArrayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOArrayResponse.swift; sourceTree = "<group>"; };
 		5C8C8E532196C5070071F0CA /* LEOListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOListResponse.swift; sourceTree = "<group>"; };
 		5C8C8E572196C9070071F0CA /* LEOMediaResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOMediaResource.swift; sourceTree = "<group>"; };
+		5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOMediaResourceUploadLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				5C8C8E512196C3D70071F0CA /* LEOArrayResponse.swift */,
 				5C8C8E532196C5070071F0CA /* LEOListResponse.swift */,
 				5C8C8E572196C9070071F0CA /* LEOMediaResource.swift */,
+				5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8C8E5A2196CA490071F0CA /* LEOMediaResourceUploadLink.swift in Sources */,
 				5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */,
 				5C8C8E582196C9070071F0CA /* LEOMediaResource.swift in Sources */,
 				5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */,
