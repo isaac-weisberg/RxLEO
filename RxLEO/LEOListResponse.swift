@@ -31,8 +31,6 @@ open class LEOListResponse<Item: Decodable>: LEOObjectResponse<LEOListModel<Item
      and the API perfectly reproduces the original behavior, however uhm no.
     */
     
-    // TODO: document out this ^^^ behavior in the API migration guide.
-    
     
     public var nextCursor: String? {
         return data.nextCursor

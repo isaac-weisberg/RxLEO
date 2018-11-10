@@ -30,6 +30,7 @@
 		5C8C8E532196C5070071F0CA /* LEOListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOListResponse.swift; sourceTree = "<group>"; };
 		5C8C8E572196C9070071F0CA /* LEOMediaResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOMediaResource.swift; sourceTree = "<group>"; };
 		5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOMediaResourceUploadLink.swift; sourceTree = "<group>"; };
+		5C8C8E5B2196CBB50071F0CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 		5C8C8E2D2196BB980071F0CA = {
 			isa = PBXGroup;
 			children = (
+				5C8C8E5B2196CBB50071F0CA /* README.md */,
 				5C8C8E392196BB990071F0CA /* RxLEO */,
 				5C8C8E382196BB990071F0CA /* Products */,
 				5C8C8E422196BD9D0071F0CA /* Frameworks */,
