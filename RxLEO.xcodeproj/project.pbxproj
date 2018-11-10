@@ -11,7 +11,7 @@
 		5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */; };
 		5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */; };
 		5C8C8E4E2196BF220071F0CA /* LEOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4D2196BF220071F0CA /* LEOError.swift */; };
-		5C8C8E502196C22B0071F0CA /* LEOValueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4F2196C22B0071F0CA /* LEOValueResponse.swift */; };
+		5C8C8E502196C22B0071F0CA /* LEOObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4F2196C22B0071F0CA /* LEOObjectResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOBaseResponse.swift; sourceTree = "<group>"; };
 		5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOApiErrorCode.swift; sourceTree = "<group>"; };
 		5C8C8E4D2196BF220071F0CA /* LEOError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOError.swift; sourceTree = "<group>"; };
-		5C8C8E4F2196C22B0071F0CA /* LEOValueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOValueResponse.swift; sourceTree = "<group>"; };
+		5C8C8E4F2196C22B0071F0CA /* LEOObjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOObjectResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */,
 				5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */,
 				5C8C8E4D2196BF220071F0CA /* LEOError.swift */,
-				5C8C8E4F2196C22B0071F0CA /* LEOValueResponse.swift */,
+				5C8C8E4F2196C22B0071F0CA /* LEOObjectResponse.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			files = (
 				5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */,
 				5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */,
-				5C8C8E502196C22B0071F0CA /* LEOValueResponse.swift in Sources */,
+				5C8C8E502196C22B0071F0CA /* LEOObjectResponse.swift in Sources */,
 				5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */,
 				5C8C8E4E2196BF220071F0CA /* LEOError.swift in Sources */,
 			);
