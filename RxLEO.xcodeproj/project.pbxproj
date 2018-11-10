@@ -18,6 +18,7 @@
 		5C8C8E5A2196CA490071F0CA /* LEOMediaResourceUploadLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */; };
 		5C92CE7321971F2E00EB37BC /* LEOAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7221971F2E00EB37BC /* LEOAPIProvider.swift */; };
 		5C92CE7521971F6A00EB37BC /* RxLEOAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7421971F6A00EB37BC /* RxLEOAPIProvider.swift */; };
+		5C92CE772197201800EB37BC /* LEORoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE762197201800EB37BC /* LEORoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5C8C8E5B2196CBB50071F0CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C92CE7221971F2E00EB37BC /* LEOAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOAPIProvider.swift; sourceTree = "<group>"; };
 		5C92CE7421971F6A00EB37BC /* RxLEOAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLEOAPIProvider.swift; sourceTree = "<group>"; };
+		5C92CE762197201800EB37BC /* LEORoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEORoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				5C8C8E3B2196BB990071F0CA /* Info.plist */,
 				5C92CE7221971F2E00EB37BC /* LEOAPIProvider.swift */,
 				5C92CE7421971F6A00EB37BC /* RxLEOAPIProvider.swift */,
+				5C92CE762197201800EB37BC /* LEORoute.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */,
 				5C92CE7521971F6A00EB37BC /* RxLEOAPIProvider.swift in Sources */,
 				5C8C8E582196C9070071F0CA /* LEOMediaResource.swift in Sources */,
+				5C92CE772197201800EB37BC /* LEORoute.swift in Sources */,
 				5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */,
 				5C8C8E542196C5070071F0CA /* LEOListResponse.swift in Sources */,
 				5C8C8E502196C22B0071F0CA /* LEOObjectResponse.swift in Sources */,
