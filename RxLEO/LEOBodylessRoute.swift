@@ -10,4 +10,6 @@ import RxNick
 
 protocol LEOBodylessRoute: LEOCommonRoute {
     var method: RxNick.MethodBodyless { get }
+    
+    var query: RxNick.URLQuery { get }
 }
