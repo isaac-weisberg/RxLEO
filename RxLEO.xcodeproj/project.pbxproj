@@ -6,9 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E472196BDF90071F0CA /* LEOApiGlobalErrorCode.swift */; };
+		5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */; };
+		5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */; };
+		5C8C8E4E2196BF220071F0CA /* LEOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4D2196BF220071F0CA /* LEOError.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5C8C8E372196BB990071F0CA /* RxLEO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLEO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8C8E3B2196BB990071F0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C8C8E472196BDF90071F0CA /* LEOApiGlobalErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOApiGlobalErrorCode.swift; sourceTree = "<group>"; };
+		5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOBaseResponse.swift; sourceTree = "<group>"; };
+		5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOApiErrorCode.swift; sourceTree = "<group>"; };
+		5C8C8E4D2196BF220071F0CA /* LEOError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,7 @@
 			children = (
 				5C8C8E392196BB990071F0CA /* RxLEO */,
 				5C8C8E382196BB990071F0CA /* Products */,
+				5C8C8E422196BD9D0071F0CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -42,8 +54,19 @@
 			isa = PBXGroup;
 			children = (
 				5C8C8E3B2196BB990071F0CA /* Info.plist */,
+				5C8C8E472196BDF90071F0CA /* LEOApiGlobalErrorCode.swift */,
+				5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */,
+				5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */,
+				5C8C8E4D2196BF220071F0CA /* LEOError.swift */,
 			);
 			path = RxLEO;
+			sourceTree = "<group>";
+		};
+		5C8C8E422196BD9D0071F0CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +111,7 @@
 				TargetAttributes = {
 					5C8C8E362196BB990071F0CA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -123,6 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */,
+				5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */,
+				5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */,
+				5C8C8E4E2196BF220071F0CA /* LEOError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +282,7 @@
 		5C8C8E402196BB990071F0CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -261,8 +290,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = RxLEO/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -271,6 +306,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.RxLEO";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -279,6 +315,7 @@
 		5C8C8E412196BB990071F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -286,8 +323,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = RxLEO/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
