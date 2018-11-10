@@ -65,7 +65,22 @@
 		5C8C8E392196BB990071F0CA /* RxLEO */ = {
 			isa = PBXGroup;
 			children = (
+				5C92CE7121971EA600EB37BC /* Models */,
 				5C8C8E3B2196BB990071F0CA /* Info.plist */,
+			);
+			path = RxLEO;
+			sourceTree = "<group>";
+		};
+		5C8C8E422196BD9D0071F0CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C92CE7121971EA600EB37BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				5C8C8E472196BDF90071F0CA /* LEOApiGlobalErrorCode.swift */,
 				5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */,
 				5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */,
@@ -76,14 +91,7 @@
 				5C8C8E572196C9070071F0CA /* LEOMediaResource.swift */,
 				5C8C8E592196CA490071F0CA /* LEOMediaResourceUploadLink.swift */,
 			);
-			path = RxLEO;
-			sourceTree = "<group>";
-		};
-		5C8C8E422196BD9D0071F0CA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
