@@ -1,5 +1,5 @@
 //
-//  CommonLEORoute.swift
+//  LEOCommonRoute.swift
 //  RxLEO
 //
 //  Created by Isaac Weisberg on 11/10/18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CommonLEORoute {
+protocol LEOCommonRoute {
     var endpoint: URL { get }
 }
