@@ -11,7 +11,7 @@ A Magora Systems' "Leopold API" implementation
 
 Tag 0.1 introduces Swift.Codable ports of the original LEONetworkingLayer project implementations of basic server response models. This pretty much means the formalization of the server interactions which are strictly defined by the API.
 
-## Changes and migration from LEONetwrokingLayer
+## Changes and migration from LEONetworkingLayer
 
 ### Server responses model layer changes
 
