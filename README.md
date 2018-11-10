@@ -20,7 +20,7 @@ Quick-fix: `LEOValueResponse` ~> `LEOObjectResponse`
 - `LEOListResponse`'s `data` field now points not to the array of the items parsed from the response, but to the `LEOListModel` instance. This has happened due to reusage of the `LEOObjectResponse`'s parsing implementation.  
 Quick-fix: `data` ~> `data.items`
 
-## Why should use Magora Systems' "Leopold API" in my projects?
+## Why should I use Magora Systems' "Leopold API" in my projects?
 
 For that very same reason we use any abstractions in this world. For the same reasons, operating systems were invented to remove the need to acknowledge the bare bones hardware, GUI were invented to remove the need to acknowledge the terminal, etc.  
 It allows you to think less. And there is less need to coordinate with other project members since the API is utmost generic and covers a major slice of common REST API use cases (let alone paging, bitch). Itz vewy gud cos awwows fow de wapid dewewopment.
