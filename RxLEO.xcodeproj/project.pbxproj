@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C5275B2219803FF00907E46 /* RxLEOSampleUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5275B1219803FF00907E46 /* RxLEOSampleUsage.swift */; };
+		5C5275B42198041E00907E46 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5275B32198041E00907E46 /* RxSwift.framework */; };
+		5C5275B52198042600907E46 /* RxLEO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8C8E372196BB990071F0CA /* RxLEO.framework */; };
 		5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E472196BDF90071F0CA /* LEOApiGlobalErrorCode.swift */; };
 		5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E492196BE480071F0CA /* LEOBaseResponse.swift */; };
 		5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E4B2196BEA70071F0CA /* LEOApiErrorCode.swift */; };
@@ -25,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C5275A9219803ED00907E46 /* RxLEOSampleUsage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLEOSampleUsage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5275AC219803ED00907E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C5275B1219803FF00907E46 /* RxLEOSampleUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLEOSampleUsage.swift; sourceTree = "<group>"; };
+		5C5275B32198041E00907E46 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		5C8C8E372196BB990071F0CA /* RxLEO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLEO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8C8E3B2196BB990071F0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8C8E472196BDF90071F0CA /* LEOApiGlobalErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOApiGlobalErrorCode.swift; sourceTree = "<group>"; };
@@ -46,22 +53,41 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5C5275A6219803ED00907E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5275B52198042600907E46 /* RxLEO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C8C8E342196BB990071F0CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5C92CE79219720D000EB37BC /* RxNick.framework in Frameworks */,
+				5C5275B42198041E00907E46 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C5275AA219803ED00907E46 /* RxLEOSampleUsage */ = {
+			isa = PBXGroup;
+			children = (
+				5C5275AC219803ED00907E46 /* Info.plist */,
+				5C5275B1219803FF00907E46 /* RxLEOSampleUsage.swift */,
+			);
+			path = RxLEOSampleUsage;
+			sourceTree = "<group>";
+		};
 		5C8C8E2D2196BB980071F0CA = {
 			isa = PBXGroup;
 			children = (
 				5C8C8E5B2196CBB50071F0CA /* README.md */,
 				5C8C8E392196BB990071F0CA /* RxLEO */,
+				5C5275AA219803ED00907E46 /* RxLEOSampleUsage */,
 				5C8C8E382196BB990071F0CA /* Products */,
 				5C8C8E422196BD9D0071F0CA /* Frameworks */,
 			);
@@ -71,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5C8C8E372196BB990071F0CA /* RxLEO.framework */,
+				5C5275A9219803ED00907E46 /* RxLEOSampleUsage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +119,7 @@
 		5C8C8E422196BD9D0071F0CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C5275B32198041E00907E46 /* RxSwift.framework */,
 				5C92CE78219720D000EB37BC /* RxNick.framework */,
 			);
 			name = Frameworks;
@@ -116,6 +144,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5C5275A4219803ED00907E46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C8C8E322196BB990071F0CA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +161,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5C5275A8219803ED00907E46 /* RxLEOSampleUsage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C5275B0219803ED00907E46 /* Build configuration list for PBXNativeTarget "RxLEOSampleUsage" */;
+			buildPhases = (
+				5C5275A4219803ED00907E46 /* Headers */,
+				5C5275A5219803ED00907E46 /* Sources */,
+				5C5275A6219803ED00907E46 /* Frameworks */,
+				5C5275A7219803ED00907E46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxLEOSampleUsage;
+			productName = RxLEOSampleUsage;
+			productReference = 5C5275A9219803ED00907E46 /* RxLEOSampleUsage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		5C8C8E362196BB990071F0CA /* RxLEO */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C8C8E3F2196BB990071F0CA /* Build configuration list for PBXNativeTarget "RxLEO" */;
@@ -153,6 +206,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Isaac Weisberg";
 				TargetAttributes = {
+					5C5275A8219803ED00907E46 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
 					5C8C8E362196BB990071F0CA = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -172,11 +229,19 @@
 			projectRoot = "";
 			targets = (
 				5C8C8E362196BB990071F0CA /* RxLEO */,
+				5C5275A8219803ED00907E46 /* RxLEOSampleUsage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5C5275A7219803ED00907E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C8C8E352196BB990071F0CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +252,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5C5275A5219803ED00907E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5275B2219803FF00907E46 /* RxLEOSampleUsage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C8C8E332196BB990071F0CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +284,63 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5C5275AE219803ED00907E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QZRPL4EC5L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RxLEOSampleUsage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.RxLEOSampleUsage";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C5275AF219803ED00907E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QZRPL4EC5L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RxLEOSampleUsage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.RxLEOSampleUsage";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5C8C8E3D2196BB990071F0CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,6 +531,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5C5275B0219803ED00907E46 /* Build configuration list for PBXNativeTarget "RxLEOSampleUsage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C5275AE219803ED00907E46 /* Debug */,
+				5C5275AF219803ED00907E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5C8C8E312196BB980071F0CA /* Build configuration list for PBXProject "RxLEO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

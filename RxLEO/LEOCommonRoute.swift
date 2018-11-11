@@ -43,3 +43,9 @@ public extension LEOCommonRoute {
         return endpoint.appendingPathComponent(path)
     }
 }
+
+public extension LEOCommonRoute {
+    var customHeaders: RxNick.Headers? {
+        return nil
+    }
+}
