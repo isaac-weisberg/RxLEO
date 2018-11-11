@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxNick
 
 public protocol LEOCommonRoute {
     /**
@@ -33,6 +34,8 @@ public protocol LEOCommonRoute {
      with endpoint and path being taken into account.
      */
     var assembledUrl: URL { get }
+    
+    var customHeaders: RxNick.Headers? { get }
 }
 
 public extension LEOCommonRoute {
