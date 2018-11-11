@@ -23,7 +23,7 @@ extension LEOCommonRoute {
     }
 }
 
-class News: Encodable { }
+class News: Codable { }
 
 /**
  Proceed to define routes
@@ -107,4 +107,24 @@ extension NewsRoute.Gets: LEOBodylessRoute {
             return "news"
         }
     }
+}
+
+/**
+ And you're done setting up, now just use it like this.
+ */
+
+func usage() {
+    let api: LEOAPIProvider = RxLEOAPIProvider()
+    
+    let route = NewsRoute.Gets.all
+    
+    _ = api.request(route)
+        .map { response -> LEOArrayResponse<News> in
+            try response.json()
+        }
+        .subscribe(onSuccess: { news in
+            print("Got me all the news, they is \(news)")
+        }, onError: { error in
+            print("Oh, shit, fuck", error)
+        })
 }
