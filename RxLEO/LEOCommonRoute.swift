@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol LEOCommonRoute {
+public protocol LEOCommonRoute {
     var endpoint: URL { get }
 }

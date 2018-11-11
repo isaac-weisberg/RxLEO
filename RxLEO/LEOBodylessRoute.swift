@@ -8,8 +8,8 @@
 
 import RxNick
 
-protocol LEOBodylessRoute: LEOCommonRoute {
+public protocol LEOBodylessRoute: LEOCommonRoute {
     var method: RxNick.MethodBodyless { get }
     
-    var query: RxNick.URLQuery { get }
+    var query: RxNick.URLQuery? { get }
 }
