@@ -97,7 +97,9 @@ extension NewsRoute.Gets: LEOBodylessRoute {
         case .all:
             return nil
         case .paged(let page):
-            return [ "page": "\(page)" ] // URLQuery is a regular string to string dictionary
+            return [
+                URLQueryItem(name: "page", value: "\(page)")
+            ] // RxNick.RxNick.URLQuery is an array of Foundation.URLQueryItem
         }
     }
     
