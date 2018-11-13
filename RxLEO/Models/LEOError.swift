@@ -7,11 +7,7 @@
 //
 
 open class LEOError: Decodable {
-    public var code: LEOApiErrorCode {
-        return LEOApiErrorCode(raw: rawCode)
-    }
-    
-    public let rawCode: String
+    public let rawCode: LEOApiErrorCode
     public let message: String
     public let field: String?
 }

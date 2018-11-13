@@ -1,4 +1,4 @@
-public enum LEOApiErrorCode {
+public enum LEOApiErrorCode: Decodable {
     
     case unknown(String)
     case invalidAuthData
@@ -22,6 +22,11 @@ public enum LEOApiErrorCode {
     case phoneNumberNotValid
     case fieldDuplicate
     
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let string = try container.decode(String.self)
+        self.init(raw: string)
+    }
     
     init(raw string: String) {
         self = [
