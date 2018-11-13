@@ -68,6 +68,18 @@ extension NewsRoute: LEOBodyfulRoute {
             return ["Authorization": "Bearer \(token)"]
         }
     }
+    
+    // You use this to customize the validators logic
+    // when it comes down to validating response status codes
+    // RxNick has a whole own error object fro that case btw.
+    var expectedStatusCodes: Range<Int> {
+        switch self {
+        case .prolongAuth:
+            return 200..<300
+        default:
+            return RxLEOStatusCodesDefaults // You can always fallback to defaults easily
+        }
+    }
 }
 
 /**
