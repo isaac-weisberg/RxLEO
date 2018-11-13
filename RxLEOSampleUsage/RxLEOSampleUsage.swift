@@ -114,7 +114,7 @@ extension NewsRoute.Gets: LEOBodylessRoute {
  */
 
 func usage() {
-    let api: LEOAPIProvider = RxLEOAPIProvider()
+    let api: RxLEOAPIProvider = RxLEODefaultAPIProvider()
     
     let route = NewsRoute.Gets.all
     
