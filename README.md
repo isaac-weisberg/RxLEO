@@ -35,14 +35,14 @@ RxNick plugs a concept of strict diversity of a route that is supposed to have a
 
 With this implementation, it's pretty much the same, but
 - There are 2 protocols that you implement separately, with different enums. Yep, sorry, but it guarantees that you are not shooting your legs. Those protocols are `LEOBodyfulRoute` and `LEOBodylessRoute`
-- You pass a route object to a `LEOAPIProvider`
+- You pass a route object to a `RxLEOAPIProvider`
 
 ### Networking layer changes
 
-Pretty much everything is new. There is now `LEOAPIProvider` protocol and its default RxNick-based implementation called `RxLEOAPIProvider`. A bit misleading naming scheme, I know, but any way. This separation allows for API stubbing which is good for clients testability. So the common usage strategy, briefly is:
-1. Manage an instance of `LEOAPIProvider` somewhere in the client's architecture
+Pretty much everything is new. There is now `RxLEOAPIProvider` protocol and its default RxNick-based implementation called `RxLEODefaultAPIProvider`. This separation allows for API stubbing which is good for clients testability. So the common usage strategy, briefly is:
+1. Manage an instance of `RxLEOAPIProvider` somewhere in the client's architecture
 1. Create a `LEOBodyfulRoute` or `LEOBodylessRoute`
-1. Push such object to one of the `LEOAPIProvider.request` methods, which will produce a `RxSwift.Single<RxNick.Response>`
+1. Push such object to one of the `RxLEOAPIProvider.request` methods, which will produce a `RxSwift.Single<RxNick.Response>`
 1. HTTP status code checks are on you, just like in the original implementation
 1. The actual model that you are supposing to retrieve from the response is determined by `RxNick.Response.json` method
 
