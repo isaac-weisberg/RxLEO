@@ -6,4 +6,6 @@
 //  Copyright © 2018 Isaac Weisberg. All rights reserved.
 //
 
-public let RxLEOStatusCodesDefaults = 200..<500
+import RxNick
+
+public let RxLEOStatusCodesDefaults: StatusCodeRangeUnion = [ 200..<500 ]

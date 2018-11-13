@@ -35,19 +35,19 @@ enum NewsRoute {
 }
 
 extension NewsRoute: LEOBodyfulRoute {
-    var method: RxNick.MethodBodyful {
+    var method: MethodBodyful {
         switch self {
         case .update, .prolongAuth:
             return .post
         }
     }
     
-    var body: RxNickRequestBody {
+    var body: RequestBody {
         switch self {
         case .update(let news):
-            return RxNick.JsonBody(with: news) // One might be interested in encoding the body as json
+            return RequestJsonBody(with: news) // One might be interested in encoding the body as json
         case .prolongAuth:
-            return RxNick.VoidBody.void // One might also be interested in sending an empty body
+            return RequestVoidBody.void // One might also be interested in sending an empty body
         }
     }
     
@@ -60,7 +60,7 @@ extension NewsRoute: LEOBodyfulRoute {
         }
     }
     
-    var customHeaders: RxNick.Headers? { // There go the custom headers and auth
+    var customHeaders: Headers? { // There go the custom headers and auth
         switch self {
         case .update:
             return nil
@@ -72,10 +72,10 @@ extension NewsRoute: LEOBodyfulRoute {
     // You use this to customize the validators logic
     // when it comes down to validating response status codes
     // RxNick has a whole own error object fro that case btw.
-    var expectedStatusCodes: Range<Int> {
+    var expectedStatusCodes: StatusCodeRangeUnion {
         switch self {
         case .prolongAuth:
-            return 200..<300
+            return [ 200..<300, 400..<401 ]
         default:
             return RxLEOStatusCodesDefaults // You can always fallback to defaults easily
         }
@@ -97,14 +97,14 @@ extension NewsRoute {
 }
 
 extension NewsRoute.Gets: LEOBodylessRoute {
-    var method: RxNick.MethodBodyless {
+    var method: MethodBodyless {
         switch self {
         case .all, .paged:
             return .get
         }
     }
     
-    var query: RxNick.URLQuery? {
+    var query: URLQuery? {
         switch self {
         case .all:
             return nil

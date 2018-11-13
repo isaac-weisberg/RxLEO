@@ -35,9 +35,9 @@ public protocol LEOCommonRoute {
      */
     var assembledUrl: URL { get }
     
-    var customHeaders: RxNick.Headers? { get }
+    var customHeaders: Headers? { get }
     
-    var expectedStatusCodes: Range<Int> { get }
+    var expectedStatusCodes: StatusCodeRangeUnion { get }
 }
 
 public extension LEOCommonRoute {
@@ -45,14 +45,14 @@ public extension LEOCommonRoute {
         return endpoint.appendingPathComponent(path)
     }
     
-    var customHeaders: RxNick.Headers? {
+    var customHeaders: Headers? {
         return nil
     }
     
     /**
      Default LEO-compliant response status codes
      */
-    var expectedStatusCodes: Range<Int> {
+    var expectedStatusCodes: StatusCodeRangeUnion {
         return RxLEOStatusCodesDefaults
     }
 }

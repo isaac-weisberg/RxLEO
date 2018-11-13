@@ -9,7 +9,7 @@
 import RxNick
 
 public protocol LEOBodyfulRoute: LEOCommonRoute {
-    var method: RxNick.MethodBodyful { get }
+    var method: MethodBodyful { get }
     
-    var body: RxNickRequestBody { get }
+    var body: RequestBody { get }
 }
