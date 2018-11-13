@@ -7,11 +7,8 @@
 //
 
 open class LEOError: Decodable {
-    // The actuall error code can be outside of the known set of enum values
-    // and thus, a case for a custom value must exist
-    // TODO: support custom errors
-    public var code: LEOApiErrorCode? {
-        return LEOApiErrorCode(rawValue: self.rawCode)
+    public var code: LEOApiErrorCode {
+        return LEOApiErrorCode(raw: rawCode)
     }
     
     public let rawCode: String

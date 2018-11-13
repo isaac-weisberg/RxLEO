@@ -1,25 +1,50 @@
-public enum LEOApiErrorCode: String {
+public enum LEOApiErrorCode {
     
-    case unknown = "Unknown"
-    case invalidAuthData = "sec.invalid_auth_data"
-    case loginShouldBeConfirmed = "sec.login_should_be_confirmed"
-    case refreshTokenInvalid = "sec.refresh_token_invalid"
-    case accessTokenInvalid = "sec.access_token_invalid"
-    case accessTokenExpired = "sec.access_token_expired"
-    case passCodeNotValid = "sec.pass_code_not_valid"
+    case unknown(String)
+    case invalidAuthData
+    case loginShouldBeConfirmed
+    case refreshTokenInvalid
+    case accessTokenInvalid
+    case accessTokenExpired
+    case passCodeNotValid
     
-    case fieldNotBlank = "common.field_not_blank"
-    case fieldSizeMax = "common.field_size_max"
-    case fieldSizeMin = "common.field_size_min"
-    case fieldInvalidLength = "common.field_invalid_length"
-    case fieldNotValidChars = "common.field_not_valid_chars"
-    case fieldNumberMax = "common.field_max"
-    case fieldNumberMin = "common.field_min"
-    case fieldFuture = "common.field_future"
-    case fieldPast = "common.field_past"
-    case emailNotValid = "common.field_email"
-    case cardNumberNotValid = "common.field_card_number"
-    case phoneNumberNotValid = "common.field_phone"
-    case fieldDuplicate = "common.field_duplicate"
+    case fieldNotBlank
+    case fieldSizeMax
+    case fieldSizeMin
+    case fieldInvalidLength
+    case fieldNotValidChars
+    case fieldNumberMax
+    case fieldNumberMin
+    case fieldFuture
+    case fieldPast
+    case emailNotValid
+    case cardNumberNotValid
+    case phoneNumberNotValid
+    case fieldDuplicate
     
+    
+    init(raw string: String) {
+        self = [
+            "sec.invalid_auth_data": LEOApiErrorCode.invalidAuthData,
+            "sec.login_should_be_confirmed": LEOApiErrorCode.loginShouldBeConfirmed,
+            "sec.refresh_token_invalid": LEOApiErrorCode.refreshTokenInvalid,
+            "sec.access_token_invalid": LEOApiErrorCode.accessTokenInvalid,
+            "sec.access_token_expired": LEOApiErrorCode.accessTokenExpired,
+            "sec.pass_code_not_valid": LEOApiErrorCode.passCodeNotValid,
+            
+            "common.field_not_blank": LEOApiErrorCode.fieldNotBlank,
+            "common.field_size_max": LEOApiErrorCode.fieldSizeMax,
+            "common.field_size_min": LEOApiErrorCode.fieldSizeMin,
+            "common.field_invalid_length": LEOApiErrorCode.fieldInvalidLength,
+            "common.field_not_valid_chars": LEOApiErrorCode.fieldNotValidChars,
+            "common.field_max": LEOApiErrorCode.fieldNumberMax,
+            "common.field_min": LEOApiErrorCode.fieldNumberMin,
+            "common.field_future": LEOApiErrorCode.fieldFuture,
+            "common.field_past": LEOApiErrorCode.fieldPast,
+            "common.field_email": LEOApiErrorCode.emailNotValid,
+            "common.field_card_number": LEOApiErrorCode.cardNumberNotValid,
+            "common.field_phone": LEOApiErrorCode.phoneNumberNotValid,
+            "common.field_duplicate": LEOApiErrorCode.fieldDuplicate,
+        ][string] ?? .unknown(string)
+    }
 }
