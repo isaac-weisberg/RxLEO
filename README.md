@@ -9,7 +9,7 @@ A Magora Systems' "Leopold API" implementation
 
 ## Note
 
-The project maintains a sample usage source file which can be found in ./RxLEO/RxLEOSampleUsage which pretty much covers 95% of usage cases.
+The project maintains a sample usage source file which can be found in ./RxLEOSampleUsage which pretty much covers 95% of usage cases.
 
 ## Project status
 
