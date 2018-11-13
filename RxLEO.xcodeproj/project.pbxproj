@@ -26,6 +26,7 @@
 		5C92CE7B219723A500EB37BC /* LEOBodyfulRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */; };
 		5C92CE7D219737B900EB37BC /* LEOBodylessRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */; };
 		5CB3D195219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */; };
+		5CB3D197219B2D0500E900E9 /* Single+EnsureStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3D196219B2D0500E900E9 /* Single+EnsureStatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOBodyfulRoute.swift; sourceTree = "<group>"; };
 		5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOBodylessRoute.swift; sourceTree = "<group>"; };
 		5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLEOStatusCodesDefaults.swift; sourceTree = "<group>"; };
+		5CB3D196219B2D0500E900E9 /* Single+EnsureStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+EnsureStatusCode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */,
 				5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */,
 				5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */,
+				5CB3D196219B2D0500E900E9 /* Single+EnsureStatusCode.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB3D197219B2D0500E900E9 /* Single+EnsureStatusCode.swift in Sources */,
 				5C8C8E5A2196CA490071F0CA /* LEOMediaResourceUploadLink.swift in Sources */,
 				5C8C8E4A2196BE480071F0CA /* LEOBaseResponse.swift in Sources */,
 				5C92CE7521971F6A00EB37BC /* RxLEODefaultAPIProvider.swift in Sources */,

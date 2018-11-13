@@ -18,18 +18,23 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
     public let nick: RxNick
     
     public func request(_ route: LEOBodyfulRoute) -> Single<RxNick.Response> {
-        return nick.bodyfulRequest(
-            route.method,
-            route.assembledUrl,
-            body: route.body,
-            headers: route.customHeaders)
+        return nick
+            .bodyfulRequest(
+                route.method,
+                route.assembledUrl,
+                body: route.body,
+                headers: route.customHeaders
+            )
+            .ensureStatusCode(in: route.expectedStatusCodes)
     }
     
     public func request(_ route: LEOBodylessRoute) -> Single<RxNick.Response> {
         return nick.bodylessRequest(
-            route.method,
-            route.assembledUrl,
-            query: route.query,
-            headers: route.customHeaders)
+                route.method,
+                route.assembledUrl,
+                query: route.query,
+                headers: route.customHeaders
+            )
+            .ensureStatusCode(in: route.expectedStatusCodes)
     }
 }
