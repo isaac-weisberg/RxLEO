@@ -25,6 +25,7 @@
 		5C92CE79219720D000EB37BC /* RxNick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C92CE78219720D000EB37BC /* RxNick.framework */; };
 		5C92CE7B219723A500EB37BC /* LEOBodyfulRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */; };
 		5C92CE7D219737B900EB37BC /* LEOBodylessRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */; };
+		5CB3D195219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5C92CE78219720D000EB37BC /* RxNick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxNick.framework; path = Carthage/Build/iOS/Static/RxNick.framework; sourceTree = "<group>"; };
 		5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOBodyfulRoute.swift; sourceTree = "<group>"; };
 		5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOBodylessRoute.swift; sourceTree = "<group>"; };
+		5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLEOStatusCodesDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				5C92CE762197201800EB37BC /* LEOCommonRoute.swift */,
 				5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */,
 				5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */,
+				5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				5C92CE7521971F6A00EB37BC /* RxLEODefaultAPIProvider.swift in Sources */,
 				5C8C8E582196C9070071F0CA /* LEOMediaResource.swift in Sources */,
 				5C92CE7B219723A500EB37BC /* LEOBodyfulRoute.swift in Sources */,
+				5CB3D195219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift in Sources */,
 				5C92CE7D219737B900EB37BC /* LEOBodylessRoute.swift in Sources */,
 				5C92CE772197201800EB37BC /* LEOCommonRoute.swift in Sources */,
 				5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */,

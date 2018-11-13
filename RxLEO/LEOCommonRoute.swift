@@ -36,16 +36,23 @@ public protocol LEOCommonRoute {
     var assembledUrl: URL { get }
     
     var customHeaders: RxNick.Headers? { get }
+    
+    var expectedStatusCodes: Range<Int> { get }
 }
 
 public extension LEOCommonRoute {
     var assembledUrl: URL {
         return endpoint.appendingPathComponent(path)
     }
-}
-
-public extension LEOCommonRoute {
+    
     var customHeaders: RxNick.Headers? {
         return nil
+    }
+    
+    /**
+     Default LEO-compliant response status codes
+     */
+    var expectedStatusCodes: Range<Int> {
+        return RxLEOStatusCodesDefaults
     }
 }
