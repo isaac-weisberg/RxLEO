@@ -9,8 +9,8 @@
 import RxSwift
 import RxNick
 
-internal extension PrimitiveSequence where Trait == SingleTrait, Element: Response {
-    func parse<Object: Decodable>() -> PrimitiveSequence<Trait, Object> {
+internal extension PrimitiveSequence where Trait == SingleTrait, Element: FreshResponse {
+    func parse<Object: Decodable>() -> PrimitiveSequence<Trait, Response<Object>> {
         return map { response in
             try response.json()
         }

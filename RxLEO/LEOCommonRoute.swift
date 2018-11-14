@@ -10,6 +10,8 @@ import Foundation
 import RxNick
 
 public protocol LEOCommonRoute {
+    associatedtype Response: Decodable
+    
     /**
      This is the base endpoint of the server.
      The proper usage is to define in a project

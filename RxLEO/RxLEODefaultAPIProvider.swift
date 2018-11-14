@@ -17,7 +17,7 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
     
     public let nick: RxNick
     
-    public func request(_ route: LEOBodyfulRoute) -> Single<Response> {
+    public func request<Route: LEOBodyfulRoute>(_ route: Route) -> Single<Response<Route.Response>> {
         return nick
             .bodyfulRequest(
                 route.method,
@@ -26,9 +26,10 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
                 headers: route.customHeaders
             )
             .ensureStatusCode(in: route.expectedStatusCodes)
+            .parse()
     }
     
-    public func request(_ route: LEOBodylessRoute) -> Single<Response> {
+    public func request<Route: LEOBodylessRoute>(_ route: Route) -> Single<Response<Route.Response>> {
         return nick.bodylessRequest(
                 route.method,
                 route.assembledUrl,
@@ -36,5 +37,6 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
                 headers: route.customHeaders
             )
             .ensureStatusCode(in: route.expectedStatusCodes)
+            .parse()
     }
 }

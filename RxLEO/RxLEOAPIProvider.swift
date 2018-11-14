@@ -10,7 +10,7 @@ import RxSwift
 import RxNick
 
 public protocol RxLEOAPIProvider {
-    func request(_ route: LEOBodyfulRoute) -> Single<Response>
+    func request<Route: LEOBodyfulRoute>(_ route: Route) -> Single<Response<Route.Response>>
     
-    func request(_ route: LEOBodylessRoute) -> Single<Response>
+    func request<Route: LEOBodylessRoute>(_ route: Route) -> Single<Response<Route.Response>>
 }
