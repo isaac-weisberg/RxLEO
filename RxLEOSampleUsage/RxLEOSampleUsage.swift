@@ -64,6 +64,12 @@ struct NewsRoute {
             method: .post,
             body: RequestJsonBody(with: news))
     }
+    
+    static let shitPenis = router.bodyful(
+        path: "", // Might want to point to the base url
+        method: .post,
+        body: RequestVoidBody.void, // Might want to have no request body
+        response: LEOBaseResponse.self)
 }
 
 
