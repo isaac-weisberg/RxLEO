@@ -37,7 +37,7 @@ public protocol LEOCommonRoute {
     
     var customHeaders: Headers? { get }
     
-    var expectedStatusCodes: StatusCodeRangeUnion { get }
+    var expectedStatusCodes: StatusCodeRange { get }
 }
 
 public extension LEOCommonRoute {
@@ -52,7 +52,7 @@ public extension LEOCommonRoute {
     /**
      Default LEO-compliant response status codes
      */
-    var expectedStatusCodes: StatusCodeRangeUnion {
+    var expectedStatusCodes: StatusCodeRange {
         return RxLEOStatusCodesDefaults
     }
 }

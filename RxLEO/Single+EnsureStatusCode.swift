@@ -10,7 +10,7 @@ import RxSwift
 import RxNick
 
 internal extension PrimitiveSequence where Trait == SingleTrait, Element: Response {
-    func ensureStatusCode(in range: StatusCodeRangeUnion) -> Single<Element> {
+    func ensureStatusCode(in range: StatusCodeRange) -> Single<Element> {
         return self
             .do(onSuccess: { response in
                 try response.ensureStatusCode(in: range)
