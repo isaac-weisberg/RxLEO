@@ -6,10 +6,19 @@
 //  Copyright © 2018 Isaac Weisberg. All rights reserved.
 //
 
+import Foundation
 import RxNick
 
-public protocol LEOBodylessRoute: LEOCommonRoute {
-    var method: MethodBodyless { get }
+public class LEOBodylessRoute<Response: Decodable>: LEOCommonRoute {
+    public let endpoint: URL
+    public let path: String
+    public let method: MethodBodyless
+    public let query: URLQuery?
     
-    var query: URLQuery? { get }
+    public init(path: String, method: MethodBodyless, query: URLQuery?, against url: URL) {
+        self.path = path
+        self.method = method
+        self.query = query
+        self.endpoint = url
+    }
 }
