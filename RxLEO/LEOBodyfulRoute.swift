@@ -15,7 +15,7 @@ public class LEOBodyfulRoute<Response: Decodable>: LEOCommonRoute {
     public let method: MethodBodyful
     public let body: RequestBody
     
-    public init(path: String, method: MethodBodyful, body: RequestBody, against url: URL) {
+    init(path: String, method: MethodBodyful, body: RequestBody, against url: URL) {
         self.path = path
         self.method = method
         self.body = body

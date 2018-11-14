@@ -15,7 +15,7 @@ public class LEOBodylessRoute<Response: Decodable>: LEOCommonRoute {
     public let method: MethodBodyless
     public let query: URLQuery?
     
-    public init(path: String, method: MethodBodyless, query: URLQuery?, against url: URL) {
+    init(path: String, method: MethodBodyless, query: URLQuery?, against url: URL) {
         self.path = path
         self.method = method
         self.query = query
