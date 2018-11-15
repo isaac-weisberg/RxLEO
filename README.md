@@ -30,14 +30,9 @@ Quick-fix: `data` ~> `data.items`
 
 ### Routing layer changes
 
-RxNick plugs a concept of strict diversity of a route that is supposed to have a body and one that is supposed to have a url query. This is REST and ortodox, however, might be changed. In the original implementation-- I don't even fucking remember what there was, but there was a similar pattern where you
-1. Defined an enum of routes, mapping 1 to 1 to business-logic endpoints, taking in count method, body, headers and urls-- complete dynamysm
-1. Make sure the enum implements the `LEORoute` protocol
-1. Pass a `LEORoute` object to a ugh a RxSwift-above-Alamofire wrapper which I have pretty surely seen outside the original framework repo and in local application projects
+_NB_: RxNick plugs a concept of strict diversity of a route that is supposed to have a body and one that is supposed to have a url query. This is defined by HTTP, not me and it's ortodox.
 
-With this implementation, it's pretty much the same, but
-- There are 2 protocols that you implement separately, with different enums. Yep, sorry, but it guarantees that you are not shooting your legs. Those protocols are `LEOBodyfulRoute` and `LEOBodylessRoute`
-- You pass a route object to a `RxLEOAPIProvider`
+- In LEONetworkingLayer you would have an extension to each route object that would define a property that has a `URL` type getter which is called to resolve paths of the endpoints. Here, this prop would return a `URL` which would act as a base URL for all the requests.
 
 ### Networking layer changes
 
