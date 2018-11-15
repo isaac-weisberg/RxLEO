@@ -33,9 +33,11 @@ Quick-fix: `data` ~> `data.items`
 _NB_: RxNick plugs a concept of strict diversity of a route that is supposed to have a body and one that is supposed to have a url query. This is defined by HTTP, not me and it's ortodox.
 
 - In LEONetworkingLayer you would have an extension to each route object that would define a property that has a `URL` type getter which is called to resolve paths of the endpoints.  
-Here we have a LEORouter type which is constructed out a `URL` which will be used to resolve paths.
+Here we have a `LEORouter` type which is constructed out a `URL` which will be used to resolve paths.
 - In LEONetworkingLayer, a coomonly used pattern would be to have enums respresenting different business-logic-concerned parts of the API. One would implement a `LEORoute` protorol with an enum and then switch cases in each getter of the certain parts of the route. This was a very bloat-ful way, which led to unnecessary SLOC increase and it was noted by the senior iOS developer of the Magora Systems that ~~this shit is fucking garbage~~ it needs simplification.  
-Here one uses methods of `LEORoute` object called `bodyless` and `bodyful`, which accept whole arrangements of congigurability of the route's behavior. For unification and visual appeal, one could define these as static members of a void struct.
+Here one uses methods of `LEORouter` object called `bodyless` and `bodyful`, which accept whole arrangements of congigurability of the route's behavior. For unification and visual appeal, one could define these as static members of a void struct.
+- In LEONetworkingLayer, you would determine which object the response was parsed into using an additional manipulation which was always on programmer.  
+Here, the type of the returned object is set to be part of a route object produced by `LEORouter`'s `bodyless` and `bodyful`, the response data is parsed for you and is available at `RxNick.Response.target`.
 
 ### Networking layer changes
 
