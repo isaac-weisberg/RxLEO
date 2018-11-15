@@ -32,7 +32,9 @@ Quick-fix: `data` ~> `data.items`
 
 _NB_: RxNick plugs a concept of strict diversity of a route that is supposed to have a body and one that is supposed to have a url query. This is defined by HTTP, not me and it's ortodox.
 
-- In LEONetworkingLayer you would have an extension to each route object that would define a property that has a `URL` type getter which is called to resolve paths of the endpoints. Here, this prop would return a `URL` which would act as a base URL for all the requests.
+- In LEONetworkingLayer you would have an extension to each route object that would define a property that has a `URL` type getter which is called to resolve paths of the endpoints.  
+Here we have a LEORouter type which is constructed out a `URL` which will be used to resolve paths.
+- 
 
 ### Networking layer changes
 
