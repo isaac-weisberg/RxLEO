@@ -43,10 +43,10 @@ With this implementation, it's pretty much the same, but
 
 Pretty much everything is new. There is now `RxLEOAPIProvider` protocol and its default RxNick-based implementation called `RxLEODefaultAPIProvider`. This separation allows for API stubbing which is good for clients testability. So the common usage strategy, briefly is:
 1. Manage an instance of `RxLEOAPIProvider` somewhere in the client's architecture
-1. Create a `LEOBodyfulRoute` or `LEOBodylessRoute`
+1. Manage a `LEORouter` which is resposible for currying all routes' protocols creation against a base URL 
+1. Create a `LEOBodyfulRoute` or `LEOBodylessRoute` using `LEORouter`'s methods
 1. Push such object to one of the `RxLEOAPIProvider.request` methods, which will produce a `RxSwift.Single<RxNick.Response>`
-1. HTTP status code checks are on you, just like in the original implementation
-1. The actual model that you are supposing to retrieve from the response is determined by `RxNick.Response.json` method
+1. The actual model that you are supposing to retrieve should already be parsed and present in the `Response`'s `target` property.
 
 ## Why should I use Magora Systems' "Leopold API" in my projects?
 
