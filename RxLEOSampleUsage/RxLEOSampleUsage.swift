@@ -70,6 +70,18 @@ struct NewsRoute {
         method: .post,
         body: RequestVoidBody.void, // Might want to have no request body
         response: LEOBaseResponse.self)
+    
+    /**
+     You can supply non-leo model
+     You can also supply `RequestRawBody`
+    */
+    static let customs = router.bodyful(
+        path: "customs/things",
+        method: .post,
+        body: RequestRawBody(
+            data: "Fuck you, stupid ass server".data(using: .utf8)!,
+            headers: [ "User-Agent": "MS-DOS 6.2 AMD286 3MB" ]),
+        response: News.self)
 }
 
 
