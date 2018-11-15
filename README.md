@@ -34,7 +34,8 @@ _NB_: RxNick plugs a concept of strict diversity of a route that is supposed to 
 
 - In LEONetworkingLayer you would have an extension to each route object that would define a property that has a `URL` type getter which is called to resolve paths of the endpoints.  
 Here we have a LEORouter type which is constructed out a `URL` which will be used to resolve paths.
-- 
+- In LEONetworkingLayer, a coomonly used pattern would be to have enums respresenting different business-logic-concerned parts of the API. One would implement a `LEORoute` protorol with an enum and then switch cases in each getter of the certain parts of the route. This was a very bloat-ful way, which led to unnecessary SLOC increase and it was noted by the senior iOS developer of the Magora Systems that ~~this shit is fucking garbage~~ it needs simplification.  
+Here one uses methods of `LEORoute` object called `bodyless` and `bodyful`, which accept whole arrangements of congigurability of the route's behavior. For unification and visual appeal, one could define these as static members of a void struct.
 
 ### Networking layer changes
 
