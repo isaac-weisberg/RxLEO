@@ -14,11 +14,13 @@ public class LEOBodylessRoute<Response: Decodable>: LEOCommonRoute {
     public let path: String
     public let method: MethodBodyless
     public let query: URLQuery?
+    public let headers: Headers?
     
-    init(path: String, method: MethodBodyless, query: URLQuery?, against url: URL) {
+    init(path: String, method: MethodBodyless, query: URLQuery?, against url: URL, headers: Headers?) {
         self.path = path
         self.method = method
         self.query = query
         self.endpoint = url
+        self.headers = headers
     }
 }

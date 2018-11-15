@@ -50,8 +50,10 @@ struct NewsRoute {
         return router.bodyless(
             path: "news/paged",
             method: .get,
-            query: [ URLQueryItem(name: "page", value: "\(page)") ])
+            query: [ URLQueryItem(name: "page", value: "\(page)") ],
             // ^^^ Would you like to have a query appended to your URL?
+            headers: [ "Content-Type": "application/human/dick" ]
+        )
     }
     
     
@@ -80,8 +82,10 @@ struct NewsRoute {
         method: .post,
         body: RequestRawBody(
             data: "Fuck you, stupid ass server".data(using: .utf8)!,
-            headers: [ "User-Agent": "MS-DOS 6.2 AMD286 3MB" ]),
-        response: News.self)
+            headers: [ "User-Agent": "MS-DOS 6.2 AMD286 3MB" ]), // These headers are related to the logic of producing a serialized body.
+        response: News.self,
+        headers: [ "Penis-Length" : "9000" ] // These headers are not related to anything and override anything that was supplied by RxLEO or RxNick frameworks as well as anything that was produced by this routes body object.
+    )
 }
 
 

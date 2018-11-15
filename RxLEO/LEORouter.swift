@@ -16,19 +16,19 @@ public class LEORouter {
         base = url
     }
     
-    public func bodyless<Target: Decodable>(path: String, method: MethodBodyless, query: URLQuery?, response: Target.Type) -> LEOBodylessRoute<Target> {
-        return LEOBodylessRoute(path: path, method: method, query: query, against: base)
+    public func bodyless<Target: Decodable>(path: String, method: MethodBodyless, query: URLQuery?, response: Target.Type, headers: Headers? = nil) -> LEOBodylessRoute<Target> {
+        return LEOBodylessRoute(path: path, method: method, query: query, against: base, headers: headers)
     }
     
-    public func bodyful<Target: Decodable>(path: String, method: MethodBodyful, body: RequestBody, response: Target.Type) -> LEOBodyfulRoute<Target> {
-        return LEOBodyfulRoute(path: path, method: method, body: body, against: base)
+    public func bodyful<Target: Decodable>(path: String, method: MethodBodyful, body: RequestBody, response: Target.Type, headers: Headers? = nil) -> LEOBodyfulRoute<Target> {
+        return LEOBodyfulRoute(path: path, method: method, body: body, against: base, headers: headers)
     }
     
-    public func bodyless<Target: Decodable>(path: String, method: MethodBodyless, query: URLQuery?) -> LEOBodylessRoute<Target> {
-        return LEOBodylessRoute(path: path, method: method, query: query, against: base)
+    public func bodyless<Target: Decodable>(path: String, method: MethodBodyless, query: URLQuery?, headers: Headers? = nil) -> LEOBodylessRoute<Target> {
+        return LEOBodylessRoute(path: path, method: method, query: query, against: base, headers: headers)
     }
     
-    public func bodyful<Target: Decodable>(path: String, method: MethodBodyful, body: RequestBody) -> LEOBodyfulRoute<Target> {
-        return LEOBodyfulRoute(path: path, method: method, body: body, against: base)
+    public func bodyful<Target: Decodable>(path: String, method: MethodBodyful, body: RequestBody, headers: Headers? = nil) -> LEOBodyfulRoute<Target> {
+        return LEOBodyfulRoute(path: path, method: method, body: body, against: base, headers: headers)
     }
 }

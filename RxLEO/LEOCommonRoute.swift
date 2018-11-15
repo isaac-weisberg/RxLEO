@@ -37,7 +37,7 @@ public protocol LEOCommonRoute {
      */
     var assembledUrl: URL { get }
     
-    var customHeaders: Headers? { get }
+    var headers: Headers? { get }
     
     var expectedStatusCodes: StatusCodeRange { get }
 }
@@ -45,10 +45,6 @@ public protocol LEOCommonRoute {
 public extension LEOCommonRoute {
     var assembledUrl: URL {
         return endpoint.appendingPathComponent(path)
-    }
-    
-    var customHeaders: Headers? {
-        return nil
     }
     
     /**

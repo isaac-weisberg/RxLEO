@@ -23,7 +23,7 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
                 route.method,
                 route.assembledUrl,
                 body: route.body,
-                headers: route.customHeaders
+                headers: route.headers
             )
             .ensureStatusCode(in: route.expectedStatusCodes)
             .parse()
@@ -34,7 +34,7 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
                 route.method,
                 route.assembledUrl,
                 query: route.query,
-                headers: route.customHeaders
+                headers: route.headers
             )
             .ensureStatusCode(in: route.expectedStatusCodes)
             .parse()
