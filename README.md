@@ -17,6 +17,8 @@ Tag 0.1 introduces Swift.Codable ports of the original LEONetworkingLayer projec
 
 Tag 0.2 introduces RxNick implementation of routing capabilities and an interface that provides the exchange between routing objects and RxNick's response primitives. The routing is heavily reminiscent of what it looked like in the original implementation.
 
+Tag 0.3 heavily reworks the routing part of the original implementation and relies on a more mature version of RxNick. One of the most notable changes are that a route object can now provide a range of status codes to validate against, the expexted response object declaration is not merged into the declaration of a route, the route definition, and well as base URL definitions, have become tons of times shorter. However, in this one using enums as routes is not supported unless you want the all to return the same type of object.
+
 ## Changes and migration from LEONetworkingLayer
 
 ### Server responses model layer changes
