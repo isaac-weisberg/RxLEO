@@ -39,18 +39,11 @@ public protocol LEOCommonRoute {
     
     var headers: Headers? { get }
     
-    var expectedStatusCodes: StatusCodes { get }
+    var statusCodes: StatusCodes { get }
 }
 
 public extension LEOCommonRoute {
     var assembledUrl: URL {
         return endpoint.appendingPathComponent(path)
-    }
-    
-    /**
-     Default LEO-compliant response status codes
-     */
-    var expectedStatusCodes: StatusCodes {
-        return RxLEOStatusCodesDefaults
     }
 }

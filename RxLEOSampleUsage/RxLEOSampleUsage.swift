@@ -76,6 +76,14 @@ struct NewsRoute {
     /**
      You can supply non-leo model
      You can also supply `RequestRawBody`
+     
+     Here headers in the `headers` field
+     are not related to anything and override
+     anything that was supplied by RxLEO or
+     RxNick frameworks as well as anything
+     that was produced by this routes body object.
+     
+     You can supply a custom policy for statusCodes validation.
     */
     static let customs = router.bodyful(
         path: "customs/things",
@@ -84,7 +92,8 @@ struct NewsRoute {
             data: "Fuck you, stupid ass server".data(using: .utf8)!,
             headers: [ "User-Agent": "MS-DOS 6.2 AMD286 3MB" ]), // These headers are related to the logic of producing a serialized body.
         response: News.self,
-        headers: [ "Penis-Length" : "9000" ] // These headers are not related to anything and override anything that was supplied by RxLEO or RxNick frameworks as well as anything that was produced by this routes body object.
+        headers: [ "Penis-Length" : "9000" ],
+        statusCodes: [ 200, 350..<200, 600..., ...100 ]
     )
 }
 

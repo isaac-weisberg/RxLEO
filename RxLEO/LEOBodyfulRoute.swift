@@ -15,12 +15,14 @@ public class LEOBodyfulRoute<Response: Decodable>: LEOCommonRoute {
     public let method: MethodBodyful
     public let body: RequestBody
     public let headers: Headers?
+    public let statusCodes: StatusCodes
     
-    init(path: String, method: MethodBodyful, body: RequestBody, against url: URL, headers: Headers?) {
+    init(path: String, method: MethodBodyful, body: RequestBody, against url: URL, headers: Headers?, statusCodes: StatusCodes) {
         self.path = path
         self.method = method
         self.body = body
         self.endpoint = url
         self.headers = headers
+        self.statusCodes = statusCodes
     }
 }
