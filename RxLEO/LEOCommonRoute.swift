@@ -39,7 +39,7 @@ public protocol LEOCommonRoute {
     
     var headers: Headers? { get }
     
-    var expectedStatusCodes: StatusCodeRange { get }
+    var expectedStatusCodes: StatusCodes { get }
 }
 
 public extension LEOCommonRoute {
@@ -50,7 +50,7 @@ public extension LEOCommonRoute {
     /**
      Default LEO-compliant response status codes
      */
-    var expectedStatusCodes: StatusCodeRange {
+    var expectedStatusCodes: StatusCodes {
         return RxLEOStatusCodesDefaults
     }
 }

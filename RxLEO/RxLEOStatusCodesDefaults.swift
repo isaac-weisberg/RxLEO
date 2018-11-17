@@ -8,4 +8,4 @@
 
 import RxNick
 
-public let RxLEOStatusCodesDefaults: StatusCodeRange = [ 200..<500 ]
+public let RxLEOStatusCodesDefaults: StatusCodes = 200..<500
