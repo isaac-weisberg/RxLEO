@@ -21,7 +21,7 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
         return nick
             .bodyfulRequest(
                 route.method,
-                route.assembledUrl,
+                route.url,
                 body: route.body,
                 headers: route.headers
             )
@@ -32,7 +32,7 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
     public func request<Target: Decodable>(_ route: LEOBodylessRoute<Target>) -> Single<Response<Target>> {
         return nick.bodylessRequest(
                 route.method,
-                route.assembledUrl,
+                route.url,
                 query: route.query,
                 headers: route.headers
             )

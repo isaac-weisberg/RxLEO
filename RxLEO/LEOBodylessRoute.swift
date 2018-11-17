@@ -10,18 +10,22 @@ import Foundation
 import RxNick
 
 public class LEOBodylessRoute<Response: Decodable>: LEOCommonRoute {
-    public let endpoint: URL
+    public var url: URL {
+        return base.appendingPathComponent(path)
+    }
+    
+    public let base: URL
     public let path: String
     public let method: MethodBodyless
     public let query: URLQuery?
     public let headers: Headers?
     public let statusCodes: StatusCodes
     
-    init(path: String, method: MethodBodyless, query: URLQuery?, against url: URL, headers: Headers?, statusCodes: StatusCodes) {
+    init(path: String, method: MethodBodyless, query: URLQuery?, against base: URL, headers: Headers?, statusCodes: StatusCodes) {
         self.path = path
         self.method = method
         self.query = query
-        self.endpoint = url
+        self.base = base
         self.headers = headers
         self.statusCodes = statusCodes
     }
