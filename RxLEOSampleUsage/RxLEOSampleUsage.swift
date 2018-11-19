@@ -162,4 +162,27 @@ func asdf() {
     let api = RxLEODefaultAPIProvider()
     
     _ = api.request(getSomePaged(at: 0))
+    
+    // and that's it
+}
+
+/**
+ Okay, here is one micro-feature to improve readability and cease magic literals
+ */
+func authUsage() {
+    struct Creds: Encodable { }
+    
+    func updateCreds(_ creds: Creds, token: String) -> LEOBodyfulRoute<LEOBaseResponse> {
+        return router.bodyful(
+            path: "creds/update",
+            method: .post,
+            body: RequestJsonBody(with: creds),
+            headers: AuthorizationBearer(token: token))
+        // Just push this dict with auth:bearer, or alternatively concat with something else.
+    }
+    
+    /**
+     Here, token is gotten from somewhere where care is taken about auth and creds and shit
+     */
+    _ = RxLEODefaultAPIProvider().request(updateCreds(Creds(), token: "qpen8rcfyq34cyf-y48-1tv1=938yt1-3cty48m1=4958tvy"))
 }
