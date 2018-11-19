@@ -150,3 +150,16 @@ extension CursorQuery: URLQuery {
         ]
     }
 }
+
+/**
+ And then
+ */
+func asdf() {
+    func getSomePaged(at index: Int) -> LEOBodylessRoute<LEOBaseResponse> {
+        return router.bodyless(path: "someshit", method: .get, query: CursorQuery(page: 0))
+    }
+    
+    let api = RxLEODefaultAPIProvider()
+    
+    _ = api.request(getSomePaged(at: 0))
+}
