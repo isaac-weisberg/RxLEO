@@ -90,6 +90,26 @@
 			path = RxLEOSampleUsage;
 			sourceTree = "<group>";
 		};
+		5C5DA9F921A3192300A8820C /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				5C7FF268219C7BE200D64DF0 /* LEORouter.swift */,
+				5C92CE762197201800EB37BC /* LEOCommonRoute.swift */,
+				5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */,
+				5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		5C5DA9FA21A3195700A8820C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5CB3D196219B2D0500E900E9 /* Single+EnsureStatusCode.swift */,
+				5C7FF262219C6AEF00D64DF0 /* Single+Parse.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		5C8C8E2D2196BB980071F0CA = {
 			isa = PBXGroup;
 			children = (
@@ -113,17 +133,13 @@
 		5C8C8E392196BB990071F0CA /* RxLEO */ = {
 			isa = PBXGroup;
 			children = (
+				5C5DA9F921A3192300A8820C /* Routing */,
 				5C92CE7121971EA600EB37BC /* Models */,
+				5C5DA9FA21A3195700A8820C /* Util */,
 				5C8C8E3B2196BB990071F0CA /* Info.plist */,
 				5C92CE7221971F2E00EB37BC /* RxLEOAPIProvider.swift */,
 				5C92CE7421971F6A00EB37BC /* RxLEODefaultAPIProvider.swift */,
-				5C92CE762197201800EB37BC /* LEOCommonRoute.swift */,
-				5C92CE7A219723A500EB37BC /* LEOBodyfulRoute.swift */,
-				5C92CE7C219737B900EB37BC /* LEOBodylessRoute.swift */,
 				5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */,
-				5CB3D196219B2D0500E900E9 /* Single+EnsureStatusCode.swift */,
-				5C7FF262219C6AEF00D64DF0 /* Single+Parse.swift */,
-				5C7FF268219C7BE200D64DF0 /* LEORouter.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
