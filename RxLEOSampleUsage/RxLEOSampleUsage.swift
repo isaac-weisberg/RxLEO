@@ -115,3 +115,38 @@ func usage() {
             print("Oh, shit, fuck", error)
         })
 }
+
+
+
+/**
+ Bonus rounds:
+ */
+
+/**
+ Given
+ */
+class CursorQuery {
+    let page: Int
+    let size: Int
+    
+    init(page: Int, size: Int = 10) {
+        self.page = page
+        self.size = size
+    }
+    
+    var next: CursorQuery {
+        return CursorQuery(page: page + 1, size: size)
+    }
+}
+
+/**
+ One can
+ */
+extension CursorQuery: URLQuery {
+    var queryItems: [URLQueryItem] {
+        return [
+            URLQueryItem(name: "page", value: "\(page)"),
+            URLQueryItem(name: "size", value: "\(size)")
+        ]
+    }
+}
