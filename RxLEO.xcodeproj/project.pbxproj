@@ -10,6 +10,7 @@
 		5C5275B2219803FF00907E46 /* RxLEOSampleUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5275B1219803FF00907E46 /* RxLEOSampleUsage.swift */; };
 		5C5275B42198041E00907E46 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5275B32198041E00907E46 /* RxSwift.framework */; };
 		5C5275B52198042600907E46 /* RxLEO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8C8E372196BB990071F0CA /* RxLEO.framework */; };
+		5C5DA9FC21A319C000A8820C /* AuthorizationBearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5DA9FB21A319C000A8820C /* AuthorizationBearer.swift */; };
 		5C7FF263219C6AEF00D64DF0 /* Single+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7FF262219C6AEF00D64DF0 /* Single+Parse.swift */; };
 		5C7FF269219C7BE200D64DF0 /* LEORouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7FF268219C7BE200D64DF0 /* LEORouter.swift */; };
 		5C8C8E482196BDF90071F0CA /* LEOApiGlobalErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C8E472196BDF90071F0CA /* LEOApiGlobalErrorCode.swift */; };
@@ -36,6 +37,7 @@
 		5C5275AC219803ED00907E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C5275B1219803FF00907E46 /* RxLEOSampleUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLEOSampleUsage.swift; sourceTree = "<group>"; };
 		5C5275B32198041E00907E46 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5C5DA9FB21A319C000A8820C /* AuthorizationBearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationBearer.swift; sourceTree = "<group>"; };
 		5C7FF262219C6AEF00D64DF0 /* Single+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Parse.swift"; sourceTree = "<group>"; };
 		5C7FF268219C7BE200D64DF0 /* LEORouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEORouter.swift; sourceTree = "<group>"; };
 		5C8C8E372196BB990071F0CA /* RxLEO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLEO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				5C92CE7221971F2E00EB37BC /* RxLEOAPIProvider.swift */,
 				5C92CE7421971F6A00EB37BC /* RxLEODefaultAPIProvider.swift */,
 				5CB3D194219B2BCF00E900E9 /* RxLEOStatusCodesDefaults.swift */,
+				5C5DA9FB21A319C000A8820C /* AuthorizationBearer.swift */,
 			);
 			path = RxLEO;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				5C8C8E522196C3D70071F0CA /* LEOArrayResponse.swift in Sources */,
 				5C8C8E4C2196BEA70071F0CA /* LEOApiErrorCode.swift in Sources */,
 				5C92CE7321971F2E00EB37BC /* RxLEOAPIProvider.swift in Sources */,
+				5C5DA9FC21A319C000A8820C /* AuthorizationBearer.swift in Sources */,
 				5C8C8E4E2196BF220071F0CA /* LEOError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
