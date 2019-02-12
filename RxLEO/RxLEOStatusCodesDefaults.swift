@@ -6,6 +6,4 @@
 //  Copyright © 2018 Isaac Weisberg. All rights reserved.
 //
 
-import RxNick
-
 public let RxLEOStatusCodesDefaults: StatusCodes = 200..<500

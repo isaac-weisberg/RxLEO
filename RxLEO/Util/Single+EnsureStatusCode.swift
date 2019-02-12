@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import RxNick
 
 internal extension PrimitiveSequence where Trait == SingleTrait, Element: ResponsePrimitive {
     func ensureStatusCode(in range: StatusCodes) -> Single<Element> {

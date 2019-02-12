@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import RxNick
 
 internal extension PrimitiveSequence where Trait == SingleTrait, Element: FreshResponse {
     func parse<Object: Decodable>() -> PrimitiveSequence<Trait, Response<Object>> {

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RxNick
 
 public class LEOBodylessRoute<Response: Decodable>: LEOCommonRoute {
     public var url: URL {

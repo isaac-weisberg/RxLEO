@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RxNick
 
 public protocol LEOCommonRoute {
     associatedtype Response: Decodable

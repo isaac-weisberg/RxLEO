@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RxNick
 
 public class LEORouter {
     public let base: URL

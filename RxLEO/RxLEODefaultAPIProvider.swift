@@ -8,7 +8,6 @@
 
 import Foundation
 import RxSwift
-import RxNick
 
 final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
     public init(session: URLSession = .shared) {

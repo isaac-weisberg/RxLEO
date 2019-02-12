@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import RxNick
 
 public protocol RxLEOAPIProvider {
     func request<Target: Decodable>(_ route: LEOBodyfulRoute<Target>) -> Single<Response<Target>>
