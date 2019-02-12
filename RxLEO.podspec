@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RxLEO"
-  spec.version      = "0.4.3"
+  spec.version      = "0.4.4"
   spec.summary      = "RxLEO is a thing."
 
   spec.swift_version = '4.0'
