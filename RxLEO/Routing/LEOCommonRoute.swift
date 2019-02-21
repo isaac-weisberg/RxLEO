@@ -16,4 +16,6 @@ public protocol LEOCommonRoute {
     var headers: Headers? { get }
     
     var statusCodes: StatusCodes { get }
+    
+    var mutator: ((URLRequest) -> URLRequest)? { get }
 }

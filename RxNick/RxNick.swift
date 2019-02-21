@@ -126,7 +126,7 @@ public class RxNick {
         self.session = session
     }
     
-    public func request(methodFactory: @escaping MethodFactory, urlFactory: @escaping URLFactory, headersFactory: HeadersFactory?, body: RequestBody? = nil) -> Single<FreshResponse> {
+    public func request(methodFactory: @escaping MethodFactory, urlFactory: @escaping URLFactory, headersFactory: HeadersFactory?, body: RequestBody? = nil, mutator: ((URLRequest) -> URLRequest)? = nil) -> Single<FreshResponse> {
         return Single.create {[session = session] single in
             let migrationStrat: HeaderMigrationStrat = { $1 }
             
@@ -152,7 +152,11 @@ public class RxNick {
                 
                 req.allHTTPHeaderFields = allHeaders
                 
-                request = req
+                if let mutated = mutator?(req) {
+                    request = mutated
+                } else {
+                    request = req
+                }
             } catch {
                 single(.error(NickError.encoding(error)))
                 return Disposables.create()
