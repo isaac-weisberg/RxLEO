@@ -8,9 +8,7 @@
 
 import Foundation
 
-public protocol LEOCommonRoute {
-    associatedtype Response: Decodable
-    
+public protocol LEOAbstractRoute {
     var url: URL { get }
     
     var headers: Headers? { get }
@@ -18,4 +16,8 @@ public protocol LEOCommonRoute {
     var statusCodes: StatusCodes { get }
     
     var mutator: ((URLRequest) -> URLRequest)? { get }
+}
+
+public protocol LEOCommonRoute: LEOAbstractRoute {
+    associatedtype Response: Decodable
 }
