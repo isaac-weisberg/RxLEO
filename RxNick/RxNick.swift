@@ -37,8 +37,6 @@ public enum MethodBodyless: String {
 
 public enum MethodBodyful: String {
     case post = "POST"
-    case put = "PUT"
-    case delete = "DELETE"
 }
 
 public enum NickError: Error {
@@ -126,7 +124,7 @@ public class RxNick {
         self.session = session
     }
     
-    public func request(methodFactory: @escaping MethodFactory, urlFactory: @escaping URLFactory, headersFactory: HeadersFactory?, body: RequestBody? = nil, mutator: ((URLRequest) -> URLRequest)? = nil) -> Single<FreshResponse> {
+    public func request(methodFactory: @escaping MethodFactory, urlFactory: @escaping URLFactory, headersFactory: HeadersFactory?, body: RequestBody? = nil) -> Single<RxNickResult<FreshResponse, NickError>> {
         return Single.create {[session = session] single in
             let migrationStrat: HeaderMigrationStrat = { $1 }
             
@@ -152,26 +150,22 @@ public class RxNick {
                 
                 req.allHTTPHeaderFields = allHeaders
                 
-                if let mutated = mutator?(req) {
-                    request = mutated
-                } else {
-                    request = req
-                }
+                request = req
             } catch {
-                single(.error(NickError.encoding(error)))
+                single(.success(.failure(NickError.encoding(error))))
                 return Disposables.create()
             }
             
             let task = session.dataTask(with: request) { data, response, error in
                 if let error = error {
-                    single(.error(NickError.networking(error)))
+                    single(.success(.failure(NickError.networking(error))))
                     return
                 }
                 
                 assert(response is HTTPURLResponse, "Since the api used in this callback is the dataTask API, as per Apple docs, this object is always the HTTPURLResponse and thus this assertion.")
                 let response = response as! HTTPURLResponse
                 let resp = FreshResponse(res: response, data: data)
-                single(.success(resp))
+                single(.success(.success(resp)))
             }
             
             task.resume()
@@ -182,7 +176,7 @@ public class RxNick {
         }
     }
     
-    public func bodylessRequest(_ method: MethodBodyless, _ url: URL, query: URLQuery?, headers: Headers?) -> Single<FreshResponse> {
+    public func bodylessRequest(_ method: MethodBodyless, _ url: URL, query: URLQuery?, headers: Headers?) -> Single<RxNickResult<FreshResponse, NickError>> {
         return request(
             methodFactory: { method.rawValue },
             urlFactory: {
@@ -195,7 +189,7 @@ public class RxNick {
         )
     }
     
-    public func bodyfulRequest(_ method: MethodBodyful, _ url: URL, body: RequestBody, headers: Headers?) -> Single<FreshResponse> {
+    public func bodyfulRequest(_ method: MethodBodyful, _ url: URL, body: RequestBody, headers: Headers?) -> Single<RxNickResult<FreshResponse, NickError>> {
         return request(
             methodFactory: { method.rawValue },
             urlFactory: { url },

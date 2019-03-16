@@ -9,7 +9,7 @@
 import RxSwift
 
 public protocol RxLEOAPIProvider {
-    func request<Target: Decodable>(_ route: LEOBodyfulRoute<Target>) -> Single<Response<Target>>
+    func request<Target: Decodable>(_ route: LEOBodyfulRoute<Target>) -> Single<RxNickResult<Response<Target>, RxLEOError>>
     
-    func request<Target: Decodable>(_ route: LEOBodylessRoute<Target>) -> Single<Response<Target>>
+    func request<Target: Decodable>(_ route: LEOBodylessRoute<Target>) -> Single<RxNickResult<Response<Target>, RxLEOError>>
 }
