@@ -11,11 +11,9 @@ import Foundation
 public protocol LEOAbstractRoute {
     var url: URL { get }
     
-    var headers: Headers? { get }
+    var headers: Headers? { get set }
     
     var statusCodes: StatusCodes { get }
-    
-    var mutator: ((URLRequest) -> URLRequest)? { get }
 }
 
 public protocol LEOCommonRoute: LEOAbstractRoute {
