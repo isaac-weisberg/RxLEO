@@ -43,7 +43,7 @@ public protocol LEORouterAuthedDelegate: class {
 }
 
 public class LEORouterAuthed: LEORouter {
-    unowned let delegate: LEORouterAuthedDelegate
+    public unowned let delegate: LEORouterAuthedDelegate
     
     init(against url: URL, delegate: LEORouterAuthedDelegate) {
         self.delegate = delegate
