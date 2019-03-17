@@ -32,16 +32,26 @@ public class LEORouter {
     }
 }
 
-public class LEORouterAuthed: LEORouter {
-    public let tokenRetriever: () -> String
+public protocol LEORouterAuthedDelegate: class {
+    func getAccessToken() -> String
     
-    init(against url: URL, tokenRetriever: @escaping () -> String) {
-        self.tokenRetriever = tokenRetriever
+    func getRefreshToken() -> String
+    
+    func update(accessToken: String)
+    
+    func set(accessToken: String, refreshToken: String)
+}
+
+public class LEORouterAuthed: LEORouter {
+    unowned let delegate: LEORouterAuthedDelegate
+    
+    init(against url: URL, delegate: LEORouterAuthedDelegate) {
+        self.delegate = delegate
         super.init(against: url)
     }
     
     func auth(headers: [String: String]?) -> [String: String] {
-        let auth = AuthorizationBearer(token: tokenRetriever())
+        let auth = AuthorizationBearer(token: delegate.getAccessToken())
         return headers?.merging(auth) { $1 } ?? auth
     }
     
