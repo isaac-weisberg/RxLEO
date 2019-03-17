@@ -9,4 +9,5 @@
 public enum RxLEOError: Error {
     case auth
     case nick(NickError)
+    case businessProblem(LEOErrorResponse)
 }

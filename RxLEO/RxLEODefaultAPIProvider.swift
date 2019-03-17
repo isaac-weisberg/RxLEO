@@ -22,8 +22,18 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
                             route.url,
                             body: route.body,
                             headers: route.headers)
-            .map { $0.map { res -> RxNickResult<Response<Target>, NickError> in res.json() } }
-            .map { $0.mapError { .failure(.nick($0)) } }
+            .map { result in
+                result
+                    .mapError { .failure(RxLEOError.nick($0)) }
+                    .map { fresh -> RxNickResult<Response<Target>, RxLEOError> in
+                        let errorResult: RxNickResult<Response<LEOErrorResponse>, NickError> = fresh.json()
+                        if case .success(let errorResp) = errorResult {
+                            return .failure(RxLEOError.businessProblem(errorResp.target))
+                        }
+                        
+                        return fresh.json().mapError { .failure(RxLEOError.nick($0)) }
+                }
+            }
     }
     
     public func request<Target: Decodable>(_ route: LEOBodylessRoute<Target>) -> Single<RxNickResult<Response<Target>, RxLEOError>> {
@@ -34,7 +44,17 @@ final public class RxLEODefaultAPIProvider: RxLEOAPIProvider {
                 query: route.query,
                 headers: route.headers
             )
-            .map { $0.map { res -> RxNickResult<Response<Target>, NickError> in res.json() } }
-            .map { $0.mapError { .failure(.nick($0)) } }
+            .map { result in
+                result
+                    .mapError { .failure(RxLEOError.nick($0)) }
+                    .map { fresh -> RxNickResult<Response<Target>, RxLEOError> in
+                        let errorResult: RxNickResult<Response<LEOErrorResponse>, NickError> = fresh.json()
+                        if case .success(let errorResp) = errorResult {
+                            return .failure(RxLEOError.businessProblem(errorResp.target))
+                        }
+                        
+                        return fresh.json().mapError { .failure(RxLEOError.nick($0)) }
+                    }
+            }
     }
 }
